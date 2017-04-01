@@ -17,6 +17,7 @@ public class FunFactsActivity extends AppCompatActivity {
     private RelativeLayout mRelativeLayout;
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
+    private String testing2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
