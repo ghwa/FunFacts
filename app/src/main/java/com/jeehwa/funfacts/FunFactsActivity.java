@@ -7,8 +7,6 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static java.lang.Integer.parseInt;
-
 
 public class FunFactsActivity extends AppCompatActivity {
 
@@ -17,7 +15,6 @@ public class FunFactsActivity extends AppCompatActivity {
     private RelativeLayout mRelativeLayout;
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
-    private String testing2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +30,10 @@ public class FunFactsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String fact = mFactBook.getFact();
-                String color = mColorWheel.getColor();
+                int color = mColorWheel.getColor();
                 mFactTextView.setText(fact);
-                mRelativeLayout.setBackgroundColor(parseInt(color)); // find a way to convert # color code to int
+                mRelativeLayout.setBackgroundColor(color);
+                mShowFactButton.setTextColor(color);
             }
         };
 
