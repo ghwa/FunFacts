@@ -1,5 +1,7 @@
 package com.jeehwa.funfacts;
 
+import android.graphics.Color;
+
 import java.util.Random;
 
 /**
@@ -24,12 +26,11 @@ public class ColorWheel {
             "#b7c0c7"  // light gray
     };
 
-    public String getColor() {
-        String color = "";
+    public int getColor() {
         Random randomGenerator = new Random();
         int randomNumber = randomGenerator.nextInt(mColors.length);
-        color = mColors[randomNumber];
+        int colorAsInt = Color.parseColor(mColors[randomNumber]);
 
-        return color;
+        return colorAsInt;
     }
 }
